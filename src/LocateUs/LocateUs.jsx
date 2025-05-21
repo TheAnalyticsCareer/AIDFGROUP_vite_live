@@ -50,7 +50,7 @@ const LocateUs = () => {
       setIsSubmitting(true);
       try {
         await axios.post(
-          `https://aidf-backend-vite.onrender.com/submit-enquiry`,
+          `https://aidfgroup-backend-live.onrender.com/submit-enquiry`,
           values
         );
         toast.success("Message Sent Successfully");

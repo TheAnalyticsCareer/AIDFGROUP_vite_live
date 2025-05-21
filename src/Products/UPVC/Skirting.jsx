@@ -42,7 +42,7 @@ const Skirting = () => {
       setIsSubmitting(true);
       try {
         await axios.post(
-          `https://aidf-backend-vite.onrender.com/submit-quote`,
+          `https://aidfgroup-backend-live.onrender.com/submit-quote`,
           values
         );
         myFormik.resetForm();
