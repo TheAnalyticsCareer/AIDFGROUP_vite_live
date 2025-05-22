@@ -105,7 +105,7 @@ const Skirting = () => {
     product1: {
       id: 1,
       name: "Aluminum Screw On Skirting",
-      price: "₹120 / sq ft",
+      price: "₹1 / sq ft",
       image: product1,
       brochure: p9,
       description:
