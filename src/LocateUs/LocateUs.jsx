@@ -166,7 +166,7 @@ const LocateUs = () => {
                 <div className="locate-us__card-content">
                   <h3 className="locate-us__card-title">Email</h3>
                   <span className="locate-us__info-value">
-                    contact@aidfgroup.com
+                    sales@aidfgroup.com
                   </span>
                 </div>
               </motion.div>
