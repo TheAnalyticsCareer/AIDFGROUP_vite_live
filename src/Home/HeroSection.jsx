@@ -193,7 +193,7 @@ const HeroSection = () => {
       </div>
 
       <div className="hs-years-image-wrapper">
-        <img src={years} alt="15+ Years Excellence" className="hs-years-image" />
+        <img src={years} alt="15+ Years Excellence" className="hs-years-image" /> 
       </div>
     </section>
   );
