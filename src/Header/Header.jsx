@@ -462,7 +462,7 @@ const sections = [
                   <span>Enquire</span>
                 </button>
                 <button className="header_button phone">
-                  <span className="button-icon">📞</span>
+                  <span className="button-icon"  onClick={() => (window.location.href = "tel:9002690068")}>📞</span>
                   <span>+91-87440-36000</span>
                 </button>
               </div>
