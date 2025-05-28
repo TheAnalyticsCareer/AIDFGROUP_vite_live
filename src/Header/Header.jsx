@@ -34,38 +34,38 @@ const Header = () => {
 
 
   // --------------------------------Define your searchable sections-----------------------------------
-  const sections = [
-    {
-      id: "hero-section",
-      title: "Page Top",
-      keywords: ["home", "main", "hero", "banner", "top", "page top", "top section","landing"]
-    },
-    {
-      id: "about-section",
-      title: "About Us",
-      keywords: ["about", "company", "story", "who we are"],
-    },
-    {
-      id: "services-section",
-      title: "Our Services",
-      keywords: ["services", "what we do", "offerings"],
-    },
-    {
-      id: "projects-section",
-      title: "Recent Projects",
-      keywords: ["projects", "work", "portfolio", "showcase"],
-    },
-    {
-      id: "testimonials-section",
-      title: "Testimonials",
-      keywords: ["reviews", "feedback", "clients", "testimonials"],
-    },
-    {
-      id: "blog-section",
-      title: "Blogs",
-      keywords: ["articles", "news", "updates", "blog"],
-    },
-  ];
+const sections = [
+  {
+    id: "aluminum-profile",
+    title: "Aluminum Profile and Skirtings",
+    route: "/aluminum-profile-skirtings",
+    keywords: ["aluminum", "profile", "skirtings", "hero", "banner", "top", "landing"]
+  },
+  {
+    id: "carpets",
+    title: "Carpets",
+    route: "/carpets",
+    keywords: ["carpets", "rugs", "floor decor", "hero", "banner", "top", "landing"]
+  },
+  {
+    id: "flooring",
+    title: "Flooring",
+    route: "/flooring",
+    keywords: ["flooring", "tiles", "wooden floors", "laminate", "hero", "banner", "top", "landing"]
+  },
+  {
+    id: "glass-partition",
+    title: "Aluminium Glass Partition",
+    route: "/aluminium-glass-partitions",
+    keywords: ["glass", "partition", "aluminium", "divider", "hero", "banner", "top", "landing"]
+  },
+  {
+    id: "more-products",
+    title: "More Products",
+    route: "/more",
+    keywords: ["products", "extras", "misc", "catalog", "hero", "banner", "top", "landing"]
+  }
+];
 
   const toggleDropdown = (menu) => {
     setActiveDropdown(activeDropdown === menu ? null : menu);
@@ -88,7 +88,7 @@ const Header = () => {
               keyword.toLowerCase().includes(query.toLowerCase())
             )
         )
-        .map((section) => ({ id: section.id, title: section.title }));
+        .map((section) => ({ id: section.id, title: section.title, route: section.route }));
 
       setSearchResults(results);
       setShowResults(true);
@@ -106,13 +106,9 @@ const Header = () => {
   };
 
   const navigateToSection = (sectionId) => {
-    if (location.pathname !== "/") {
-      navigate("/", { state: { scrollTo: sectionId } });
-    } else {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+    const section = sections.find(sec => sec.id === sectionId);
+    if (section && section.route) {
+      navigate(section.route);
     }
     setSearchQuery("");
     setSearchResults([]);
@@ -488,7 +484,7 @@ const Header = () => {
                 <form onSubmit={handleSearchSubmit} className="search_bar">
                   <input
                     type="text"
-                    placeholder="Search sections..."
+                    placeholder="Search Products..."
                     value={searchQuery}
                     onChange={handleSearchChange}
                     onFocus={() =>
@@ -524,6 +520,7 @@ const Header = () => {
                   </div>
                 )}
               </div>
+
 
               {/* Main Navigation */}
               <nav className="main_navigation">
@@ -661,7 +658,7 @@ const Header = () => {
                 <form onSubmit={handleSearchSubmit} className="search_bar">
                   <input
                     type="text"
-                    placeholder="Search sections..."
+                    placeholder="Search Products..."
                     value={searchQuery}
                     onChange={handleSearchChange}
                     onFocus={() =>

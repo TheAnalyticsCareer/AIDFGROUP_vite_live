@@ -1,3 +1,23 @@
+.hs-badge {
+  position: absolute;
+  top: 3.5vw;
+  z-index: 10;
+}
+
+.hs-badge-right {
+  right: 1.5vw;
+}
+.hs-badge-image {
+  width: clamp(50px, 8vw, 100px);
+  height: auto;
+}
+@media (max-width: 426px) {
+  .hs-badge {
+    top: 55px;
+  }
+}
+
+
 /* Hero Section Container */
 .hs-container {
   position: relative;
