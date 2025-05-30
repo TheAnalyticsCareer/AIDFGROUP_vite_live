@@ -36,7 +36,7 @@ const MoreProducts = () => {
       name: "",
       phone: "",
       email: "",
-      price: "",
+      // price: "",
       height: "",
       material: "",
       finish: "",
@@ -74,7 +74,7 @@ const MoreProducts = () => {
   useEffect(() => {
     if (isModalOpen && currentProduct) {
       myFormik.setFieldValue("name", currentProduct.name);
-      myFormik.setFieldValue("price", currentProduct.price);
+      // myFormik.setFieldValue("price", currentProduct.price);
     }
   }, [isModalOpen, currentProduct]);
 
@@ -149,7 +149,7 @@ const MoreProducts = () => {
         </div>
         <div className="more-products-content">
           <h3 className="more-products-title">{product.name}</h3>
-          <div className="more-products-price">{product.price}</div>
+{/*           <div className="more-products-price">{product.price}</div> */}
           <button
             onClick={() => openModal(key)}
             className="more-products-quote-btn"
@@ -252,9 +252,9 @@ const MoreProducts = () => {
               <h3 className="more-products-modal-title">
                 {currentProduct.name}
               </h3>
-              <div className="more-products-modal-price">
+{/*               <div className="more-products-modal-price">
                 {currentProduct.price}
-              </div>
+              </div> */}
             </div>
             <div className="more-products-modal-right">
               <div className="more-products-contact-form">
@@ -268,11 +268,11 @@ const MoreProducts = () => {
                     name="name"
                     value={currentProduct.name}
                   />
-                  <input
+{/*                   <input
                     type="hidden"
                     name="price"
                     value={currentProduct.price}
-                  />
+                  /> */}
                   <div className="more-products-form-group">
                     <label htmlFor="phone">Phone Number*</label>
                     <input
