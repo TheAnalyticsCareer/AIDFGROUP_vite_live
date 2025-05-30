@@ -33,7 +33,7 @@ const Skirting = () => {
       name: "",
       phone: "",
       email: "",
-      price: "",
+      // price: "",
       height: "",
       material: "",
       finish: "",
@@ -72,7 +72,7 @@ const Skirting = () => {
   useEffect(() => {
     if (isModalOpen && currentProduct) {
       myFormik.setFieldValue("name", currentProduct.name);
-      myFormik.setFieldValue("price", currentProduct.price);
+      // myFormik.setFieldValue("price", currentProduct.price);
 
       const heightDetail = currentProduct.details.find(
         (d) => d.label === "Height"
@@ -259,7 +259,7 @@ const Skirting = () => {
         </div>
         <div className="skirting-product-content">
           <h3 className="skirting-product-title">{product.name}</h3>
-          <div className="skirting-product-price">{product.price}</div>
+{/*           <div className="skirting-product-price">{product.price}</div> */}
           <div className="skirting-product-description-container">
             <p className="skirting-product-description">
               {product.description}
@@ -355,9 +355,9 @@ const Skirting = () => {
                 <h3 className="skirting-modal-product-title">
                   {currentProduct.name}
                 </h3>
-                <div className="skirting-modal-price">
+{/*                 <div className="skirting-modal-price">
                   {currentProduct.price}
-                </div>
+                </div> */}
                 <div className="skirting-modal-description-container">
                   <p className="skirting-modal-description">
                     {currentProduct.description}
@@ -391,11 +391,11 @@ const Skirting = () => {
                     name="name"
                     value={currentProduct.name}
                   />
-                  <input
+{/*                   <input
                     type="hidden"
                     name="price"
                     value={currentProduct.price}
-                  />
+                  /> */}
                   <div className="skirting-form-group">
                     <label htmlFor="phone">Phone Number*</label>
                     <input
