@@ -29,7 +29,7 @@ const Aluminium_glass = () => {
       name: "",
       phone: "",
       email: "",
-      price: "",
+      // price: "",
       height: "",
       material: "",
       finish: "",
@@ -58,7 +58,7 @@ const Aluminium_glass = () => {
   useEffect(() => {
     if (isModalOpen && currentProduct) {
       myFormik.setFieldValue("name", currentProduct.name);
-      myFormik.setFieldValue("price", currentProduct.price);
+      // myFormik.setFieldValue("price", currentProduct.price);
 
       const thicknessDetail = currentProduct.details.find(
         (d) => d.label === "Thickness"
@@ -235,7 +235,7 @@ const Aluminium_glass = () => {
         </div>
         <div className="aluminium-product-content">
           <h3 className="aluminium-product-title">{product.name}</h3>
-          <div className="aluminium-product-price">{product.price}</div>
+{/*           <div className="aluminium-product-price">{product.price}</div> */}
           <div className="aluminium-product-description-container">
             <p className="aluminium-product-description">
               {product.description}
@@ -333,9 +333,9 @@ const Aluminium_glass = () => {
                 <h3 className="aluminium-modal-product-title">
                   {currentProduct.name}
                 </h3>
-                <div className="aluminium-modal-price">
+{/*                 <div className="aluminium-modal-price">
                   {currentProduct.price}
-                </div>
+                </div> */}
                 <div className="aluminium-modal-description-container">
                   <p className="aluminium-modal-description">
                     {currentProduct.description}
@@ -369,11 +369,11 @@ const Aluminium_glass = () => {
                     name="name"
                     value={currentProduct.name}
                   />
-                  <input
+{/*                   <input
                     type="hidden"
                     name="price"
                     value={currentProduct.price}
-                  />
+                  /> */}
                   <div className="aluminium-form-group">
                     <label htmlFor="phone">Phone Number*</label>
                     <input
