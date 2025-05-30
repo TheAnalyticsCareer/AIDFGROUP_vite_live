@@ -58,7 +58,7 @@ const Flooring = () => {
       name: "",
       phone: "",
       email: "",
-      price: "",
+      // price: "",
       height: "",
       material: "",
       finish: "",
@@ -105,7 +105,7 @@ const Flooring = () => {
   useEffect(() => {
     if (isModalOpen && currentProduct) {
       myFormik.setFieldValue("name", currentProduct.name);
-      myFormik.setFieldValue("price", currentProduct.price);
+      // myFormik.setFieldValue("price", currentProduct.price);
 
       const heightDetail = currentProduct.details.find(
         (d) => d.label === "Height"
@@ -542,7 +542,7 @@ const Flooring = () => {
         </div>
         <div className="flooring-product-content">
           <h3 className="flooring-product-title">{product.name}</h3>
-          <div className="flooring-product-price">{product.price}</div>
+{/*           <div className="flooring-product-price">{product.price}</div> */}
           <div className="flooring-product-description-container">
             <p className="flooring-product-description">
               {product.description}
@@ -676,9 +676,9 @@ const Flooring = () => {
                 <h3 className="flooring-modal-product-title">
                   {currentProduct.name}
                 </h3>
-                <div className="flooring-modal-price">
+{/*                 <div className="flooring-modal-price">
                   {currentProduct.price}
-                </div>
+                </div> */}
                 <div className="flooring-modal-description-container">
                   <p className="flooring-modal-description">
                     {currentProduct.description}
@@ -712,11 +712,11 @@ const Flooring = () => {
                     name="name"
                     value={currentProduct.name}
                   />
-                  <input
+{/*                   <input
                     type="hidden"
                     name="price"
                     value={currentProduct.price}
-                  />
+                  /> */}
                   <div className="flooring-form-group">
                     <label htmlFor="phone">Phone Number*</label>
                     <input
