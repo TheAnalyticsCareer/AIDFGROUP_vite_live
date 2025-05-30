@@ -54,7 +54,7 @@ const Carpet = () => {
       name: "",
       phone: "",
       email: "",
-      price: "",
+      // price: "",
       height: "",
       material: "",
       finish: "",
@@ -101,7 +101,7 @@ const Carpet = () => {
   useEffect(() => {
     if (isModalOpen && currentProduct) {
       myFormik.setFieldValue("name", currentProduct.name);
-      myFormik.setFieldValue("price", currentProduct.price);
+      // myFormik.setFieldValue("price", currentProduct.price);
 
       const height = currentProduct.details.find(
         (d) => d.label === "Thickness"
@@ -499,7 +499,7 @@ const Carpet = () => {
         </div>
         <div className="carpet-product-content">
           <h3 className="carpet-product-title">{product.name}</h3>
-          <div className="carpet-product-price">{product.price}</div>
+{/*           <div className="carpet-product-price">{product.price}</div> */}
           <div className="carpet-product-description-container">
             <p className="carpet-product-description">{product.description}</p>
           </div>
@@ -631,7 +631,7 @@ const Carpet = () => {
                 <h3 className="carpet-modal-product-title">
                   {currentProduct.name}
                 </h3>
-                <div className="carpet-modal-price">{currentProduct.price}</div>
+{/*                 <div className="carpet-modal-price">{currentProduct.price}</div> */}
                 <div className="carpet-modal-description-container">
                   <p className="carpet-modal-description">
                     {currentProduct.description}
@@ -665,11 +665,11 @@ const Carpet = () => {
                     name="name"
                     value={currentProduct.name}
                   />
-                  <input
+{/*                   <input
                     type="hidden"
                     name="price"
                     value={currentProduct.price}
-                  />
+                  /> */}
                   <div className="carpet-form-group">
                     <label htmlFor="phone">Phone Number*</label>
                     <input
