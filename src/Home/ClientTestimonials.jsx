@@ -67,8 +67,6 @@ const ClientTestimonials = () => {
             spaceBetween={40}
             slidesPerView={1}
             loop={true}
-            loopedSlides={3} // Number of slides to duplicate for loop
-            loopAdditionalSlides={1} // Extra slides for smoother transition
             autoplay={{
               delay: 2000,
               disableOnInteraction: false,
@@ -94,12 +92,10 @@ const ClientTestimonials = () => {
               768: {
                 slidesPerView: 2,
                 spaceBetween: 30,
-                loopedSlides: 2, // Adjust for different viewports
               },
               1024: {
                 slidesPerView: 3,
                 spaceBetween: 40,
-                loopedSlides: 3, // Adjust for different viewports
               },
             }}
             className="testimonial-swiper"

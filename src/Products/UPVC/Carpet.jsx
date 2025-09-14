@@ -37,6 +37,9 @@ import product19 from "./img/carpet/p6.jpeg";
 import p13 from "./img/carpet/welspun-carpet-tiles.pdf";
 import p14 from "./img/carpet/carpet-tile.pdf";
 import p15 from "./img/carpet/loop-pile-carpet.pdf";
+import p19 from "./img/carpet/DALAAN Carpet Tiles.pdf";
+
+
 
 const Carpet = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -367,6 +370,7 @@ const Carpet = () => {
       price: "",
       image: product19,
       category: "carpetTile",
+       brochure: p19,
       description:
         "",
       details: [
