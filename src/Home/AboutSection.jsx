@@ -8,6 +8,7 @@ import Logo from "./HomeImg/companyLogo.jpg";
 import Logo2 from "./HomeImg/l1.PNG";
 import icon1 from "./HomeImg/premium-icon.png";
 import icon2 from "./HomeImg/Eco-Friendly.png";
+import broshure from "./HomeImg/DALAAN Carpet Tiles.pdf";
 
 const slideImages = [aboutImage1, aboutImage2, aboutImage3, aboutImage4];
 
@@ -57,6 +58,31 @@ const AIDFAboutSection = () => {
               padding: 2,
             }}
           />
+          {/* Get Catalogue Button */}
+          <a
+            href={broshure}
+            download
+            className="aidf-get-catalogue-btn"
+            style={{
+              position: "absolute",
+              bottom: 18,
+              right: 18,
+              zIndex: 4,
+              background: "#d12626ff",
+              color: "#fffefeff",
+              fontWeight: 700,
+              fontSize: "1rem",
+              padding: "8px 20px",
+              borderRadius: "8px",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.10)",
+              border: "2px solid #6B9071",
+              textDecoration: "none",
+              transition: "background 0.2s",
+              display: "inline-block",
+            }}
+          >
+            Get Catalogue
+          </a>
           {/* Newly Launched Badge (styled like Carpet/Dalaan) */}
           <div
             className="about-newly-launched"
@@ -143,6 +169,31 @@ const AIDFAboutSection = () => {
               display: "block",
             }}
           />
+          {/* Get Catalogue Button for mobile */}
+          <a
+            href={broshure}
+            download
+            className="aidf-get-catalogue-btn-mobile"
+            style={{
+              position: "absolute",
+              bottom: 12,
+              right: 12,
+              zIndex: 4,
+              background: "#c92e2eff",
+              color: "#ffffffff",
+              fontWeight: 700,
+              fontSize: "0.95rem",
+              padding: "7px 16px",
+              borderRadius: "7px",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.10)",
+              border: "2px solid #6B9071",
+              textDecoration: "none",
+              transition: "background 0.2s",
+              display: "inline-block",
+            }}
+          >
+            Get Catalogue
+          </a>
           <div
             className="about-newly-launched-mobile"
             style={{

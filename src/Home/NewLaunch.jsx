@@ -5,15 +5,19 @@ import img3 from "./NewLaunchImg/ultra-max.jpg";
 import img4 from "./NewLaunchImg/project-4.jpeg";
 import img5 from "./NewLaunchImg/STILE DOORS- Glass Partition.webp";
 import img6 from "./NewLaunchImg/Oak Walnut Art Tiles.webp";
+
+
+import img7 from "./NewLaunchImg/Gurgaon Site.jpeg";
+import img8 from "./NewLaunchImg/Gurgaon Site2.jpeg";
+import img9 from "./NewLaunchImg/Sonipat Site.jpeg";
+import img10 from "./NewLaunchImg/Sonipat Site2.jpeg";
+
+
 import "./NewLaunch.css";
 
 const NewLaunch = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const totalSlides = 6;
-  const autoPlayInterval = 5000; // 5 seconds
-  const timerRef = useRef(null);
-
   const projects = [
     {
       id: 1,
@@ -46,7 +50,14 @@ const NewLaunch = () => {
       location: "Delhi",
     },
     { id: 6, image: img6, title: "Oak Walnut Art Tiles", location: "Dehradun" },
+    { id: 7, image: img7, title: "Gurgaon Site", location: "Uttarpradesh" },
+    { id: 8, image: img8, title: "Gurgoan Site", location: "Uttarpradesh" },
+    { id: 9, image: img9, title: "Sonipat Site", location: "Haryana" },
+    { id: 10, image: img10, title: "Sonipat Site", location: "Haryana" },
   ];
+  const totalSlides = projects.length; // Use all 10 slides
+  const autoPlayInterval = 5000; // 5 seconds
+  const timerRef = useRef(null);
 
   // Function to go to next slide
   const nextSlide = () => {
